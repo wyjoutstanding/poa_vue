@@ -1,0 +1,62 @@
+{
+  "name": "big-screen-vue-datav",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@jiaminghi/data-view": "^2.7.3",
+    "@types/echarts": "^4.4.3",
+    "axios": "^0.21.0",
+    "core-js": "^3.6.4",
+    "echarts": "^4.6.0",
+    "element-ui": "^2.14.1",
+    "jquery": "^3.5.1",
+    "js2wordcloud": "^1.1.12",
+    "qs.js": "^0.1.12",
+    "vue": "^2.6.11",
+    "vue-awesome": "^4.0.2",
+    "vue-axios": "^3.2.0",
+    "vue-router": "^3.1.5",
+    "vue-wordcloud": "^1.1.1",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.2.0",
+    "@vue/cli-plugin-eslint": "^4.2.0",
+    "@vue/cli-service": "^4.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "less": "^4.0.0",
+    "less-loader": "^7.2.1",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue-happy-scroll": "^2.1.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-mixed-spaces-and-tabs": "off",
+      "no-unused-vars": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
