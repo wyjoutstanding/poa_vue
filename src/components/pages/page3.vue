@@ -9,7 +9,7 @@
           <div class="d-flex jc-center">
             <dv-decoration-8 :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
 				<div class="title">
-              <span class="title-text">舆情分析系统页面3</span>
+              <span class="title-text">网络舆情分析系统</span>
               <dv-decoration-6
                 class="title-bototm"
                 :reverse="true"
@@ -36,12 +36,12 @@
 			<div class="react-right ml-4" style="background-color: #252f5b;">
             <router-link :to="{name:'login'}">
 			<span class="react-before"></span>
-            <span class="text colorBlue">login</span>
+            <span class="text colorBlue">登录</span>
 			</router-link>
             </div>
             <div class="react-right ml-3" style="background-color: #252f5b;">
 				<router-link :to="{name:'page1'}">
-              <span class="text colorBlue">page1</span>
+              <span class="text colorBlue">搜索</span>
 			</router-link>
             </div>
 			
@@ -49,12 +49,12 @@
           <div style="width: 40%" class="d-flex">
 			<div class="react-left bg-color-blue mr-3">
 				<router-link :to="{name:'page3'}">
-				<span class="text fw-b">page3</span>
+				<span class="text fw-b">舆情展示</span>
 				</router-link>
 			</div>
             <div class="react-left bg-color-blue mr-3">
 			<router-link :to="{name:'page4'}">
-            <span class="text fw-b">page4</span>
+            <span class="text fw-b">舆情分析</span>
 			</router-link>
             </div>
             <div

@@ -9,7 +9,7 @@
           <div class="d-flex jc-center">
             <dv-decoration-8 :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
 				<div class="title">
-              <span class="title-text">舆情分析系统</span>
+              <span class="title-text">网络舆情分析系统</span>
               <dv-decoration-6
                 class="title-bototm"
                 :reverse="true"
@@ -29,19 +29,15 @@
         <!-- 第二行 -->
         <div class="d-flex jc-between px-2">
           <div class="d-flex" style="width: 50%">
-         <!--   <div
-              class="react-right ml-4"
-              style="width: 6.25rem; text-align: left;background-color: #0f1325;"
-            > -->
 			<div class="react-right ml-4" style="background-color: #252f5b;">
             <router-link :to="{name:'login'}">
 			<span class="react-before"></span>
-            <span class="text colorBlue">login</span>
+            <span class="text colorBlue">登录</span>
 			</router-link>
             </div>
             <div class="react-right ml-3" style="background-color: #252f5b;">
 				<router-link :to="{name:'page1'}">
-              <span class="text colorBlue">page1</span>
+              <span class="text colorBlue">搜索</span>
 			</router-link>
             </div>
 			
@@ -49,12 +45,12 @@
           <div style="width: 40%" class="d-flex">
 			<div class="react-left bg-color-blue mr-3">
 				<router-link :to="{name:'page3'}">
-				<span class="text fw-b">page3</span>
+				<span class="text fw-b">舆情展示</span>
 				</router-link>
 			</div>
             <div class="react-left bg-color-blue mr-3">
 			<router-link :to="{name:'page4'}">
-            <span class="text fw-b">page4</span>
+            <span class="text fw-b">舆情分析</span>
 			</router-link>
             </div>
             <div
@@ -66,69 +62,11 @@
             </div>
           </div>
         </div>
-<div>{{info}}</div>
-        <div class="body-box">
-          <!-- 第三行数据 -->
-			<div class="content-box">
-				<div>
-					<dv-border-box-12>
-						<centerRight1 />
-					</dv-border-box-12>
-				</div>
-				
-			<div>
-				<dv-border-box-12>
-					<centerRight1 />
-				</dv-border-box-12>
-            </div>
-            <!-- 中间 -->
+       <br/><br/><br/><br/>
+<div align="center"><img src="../assets/images/intro.jpg" width="70%" height="70%"/></div> 
         <div>
-            <!--  <center />-->
-			<form action="http://baidu.com/s" method="get">
-				<div>
-					<br><br><br><br><br><br><br><br>
-					<br />
-					<input name="wd" id="search" type="text"
-						style="margin:0px;
-						width: 350px;
-						border-radius:9px;
-						height: 40px;" 
-						value="   请输入关键词">
-						<br><br>
-				</div>
-				<div>
-					<button type="submit" 
-						left:100px 
-						style="margin:0px;
-							width: 350px;
-							border-radius:5px;
-							height: 30px;
-							background: #99CCFF;
-							opacity:0.8;"
-						border-radius:5px>立即搜索</button>
-				</div>
-			</form>
-        </div>
-            <!-- 中间 -->
-            <div>
-              <centerRight2 />
-            </div>
-            <div>
-              <dv-border-box-12>
-				<centerLeft1 />
-              </dv-border-box-12>
-            </div>
-          </div>
 
-          <!-- 第四行数据 -->
-          <div class="bototm-box">
-            <dv-border-box-13>
-              <bottomLeft />
-            </dv-border-box-13>
-            <dv-border-box-12>
-              <bottomRight />
-            </dv-border-box-12>
-          </div>
+            
         </div>
       </div>
     </dv-full-screen-container>
@@ -139,13 +77,7 @@
 <script>
 	import axios from 'axios'
 import { formatTime } from '../utils/index.js'
-import centerLeft1 from "./centerLeft1";
-//import centerLeft2 from "./centerLeft2";
-import centerRight1 from "./centerRight1";
-import centerRight2 from "./centerRight2";
-//import center from "./center";
-import bottomLeft from "./bottomLeft";
-import bottomRight from "./bottomRight";
+
 export default {
   data () {
     return {
@@ -158,13 +90,13 @@ export default {
     };
   },
   components: {
-    centerLeft1,
+    //centerLeft1,
     //centerLeft2,
-    centerRight1,
-    centerRight2,
+   // centerRight1,
+    //centerRight2,
    // center,
-    bottomLeft,
-    bottomRight
+   // bottomLeft,
+    //bottomRight
   },
   mounted () {
 	  // axios({

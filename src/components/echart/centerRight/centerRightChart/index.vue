@@ -1,6 +1,6 @@
 <template>
   <div>
-	
+	<br/><br/><br/><br/>
     <Chart :cdata="cdata" />
   </div>
 </template>
