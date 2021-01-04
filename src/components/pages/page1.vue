@@ -171,6 +171,26 @@
 			<!-- 第四行 -->
 			<div>
 		<el-table
+      :data="data_list"
+	  height=1000
+      style="width: 100%">
+      <el-table-column
+        prop="topic"
+        label="主题"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="summary"
+        label="摘要"
+        width="700">
+      </el-table-column>
+      <el-table-column
+        prop="url"
+        label="链接"
+		width="250">
+      </el-table-column>
+    </el-table>
+		<!-- <el-table
       :data="tableData"
       style="width: 100%">
       <el-table-column
@@ -188,7 +208,7 @@
         label="地址"
 		width="180">
       </el-table-column>
-    </el-table>
+    </el-table> -->
 			</div>
 			
         </div>
@@ -341,7 +361,8 @@ export default {
 	searchKeyword () {
       axios({
 			method:'post',
-      url:'http://47.100.27.31:5000/api/search/',
+		  url:'http://47.100.27.31:5000/api/search/',
+		//   url:'http://localhost:5000/api/search/',
       data:{
 				// catagories:document.getElementById("searchBox").value,
 				// keywords:document.getElementById("searchBox").value
@@ -350,13 +371,16 @@ export default {
 			}
 		})
 		.then((response) => {
-		axios({
+			console.log(response.data)
+			this.data_list = response.data
+
+			axios({
 				method: 'get',
-				url: 'http://47.100.27.31:5000/api/get_hotspot/'
+				url: 'http://47.100.27.31:5000/api/set_craw_start/'
 			})
 			.then((response) => {
-				this.data_list = response.data
-				console.log(this.data_list)
+				// this.data_list = response.data
+				console.log(this.response.data)
 			}) 
 		  })
 		  .catch(function (error) {
