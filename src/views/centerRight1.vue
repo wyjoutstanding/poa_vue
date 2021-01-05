@@ -29,10 +29,11 @@
 export default {
   data() {
     return {
+		analist:[],
 		info:{},
       config: {
         header: ["标题", "实时热度"],
-		data:analist
+		data:[]
 		 // ["元旦当天,长官杂技小镇乐翻天!","<span class=colorGrass>98</span>"],
 		  
 		  // ["元旦宅家游戏推荐02-月圆之夜","<span class=colorGrass>98</span>"],
@@ -112,6 +113,21 @@ export default {
 		      }   
 			 
 			  analist=data_tmp;
+			  this.analist=data_tmp;
+			  this.config = {
+				header: ["标题", "实时热度"],
+				data: analist,
+				rowNum: 8, //表格行数
+				headerHeight: 40,
+				headerBGC: "#0f1325", //表头
+				oddRowBGC: "#0f1325", //奇数行
+				evenRowBGC: "#171c33", //偶数行
+				indexHeader:'排名',
+				index: true,
+				columnWidth: [100],
+				align: ["center"],
+				carousel: 'single'
+			  }
 			  console.log(analist);
 		         // this.drawLine('main')
 		  }, response => {
