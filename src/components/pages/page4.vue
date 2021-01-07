@@ -71,6 +71,70 @@
 			<div class="bototm-box">
 				
 					<dv-border-box-12>
+						<br/>
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:2px">
+						   <span style="color:#5cd9e8">
+          <icon name="align-left"></icon>
+        </span>
+        <span class="fs-xl text mx-2">流量分析</span>
+      
+						<!-- 增加复选框 -->
+						<br/><br/>
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<font style="
+						color: #72e3ff;
+						font-size: 12px;
+						background-color: transparent;
+						width:70px">
+							选择网站：
+						</font>
+							<font style="
+						color: #72e3ff;
+						font-size: 12px;
+						background-color: transparent;
+						width:70px">
+						<input type="checkbox" value="微博">微博
+						<!-- 间隔 -->
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="知乎">知乎
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="百度">百度
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="凤凰网">凤凰网
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="政治">政治
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="八卦">八卦
+						</font>
+						<br/><br/>
 						<centerRight2 />
 					</dv-border-box-12>
 			

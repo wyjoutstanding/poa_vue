@@ -74,109 +74,221 @@
 					<form>
 						<div>
 							<br />
+							<!-- 搜索框 -->
 							<input name="wd" id="search" type="text"
 							v-model="keyWord"
 
 								style="margin:0px;
 								width: 400px;
 								border-radius:9px;
-								background: #ffffff;
-								height: 40px;" 
+								background-color:transparent;
+								height: 40px;
+								    color: #72e3ff;
+								    border: #00c0ef 2px solid;
+								    text-indent:0.6em;
+									font-size: 16px;
+								    border-radius: 5px;
+								"  
 								value="请输入关键词">
+							<!-- 间隔 -->
+							<input type="text" 
+								disabled="disabled"
+								style="
+								background-color: transparent;
+								width:10px">
+							<!-- 按钮 -->
 							<button
 								type="button"
 								left:100px 
 								style="margin:0px;
-									width: 80px;
 									border-radius:5px;
 									height: 30px;
-									background: #ffffff;
-									opacity:0.8;"
+									
+									opacity:0.8;
+									background-color: #00c0ef;
+									    color: white;
+									    border: #00cdff 2px solid;
+									    width: 80px;
+									    border-radius: 5px;
+									"
 								@click="searchKeyword()"
 							>立即搜索</button>
 						</div>
 					</form>
 				</div>
-				<br>
-				<div style="width:100%;text-align:center">
-					<font size:10px>
-						信息类别：
-					</font>
-					<select name="信息类别" 
-						id="info"
-						
-						>
-						<option value="全选">全选</option>
-						<option value="新闻">新闻</option>
-						<option value="财经">财经</option>
-						<option value="军事">军事</option>
-						<option value="娱乐">娱乐</option>
-						<option value="政治">政治</option>
-						<option value="八卦">八卦</option>
-					</select>
-					<font size:10px>
-						请选择阈值：
-					</font>
-					<input 
-						type="number"
-						min="0"
-						max="100"
-						>
-					<font size:10px>
-						新闻来源：
-					</font>
-					<select name="新闻来源" 
-						id="info"
-						>
-						<option value="全选">全选</option>
-						<option value="百度">百度</option>
-						<option value="微博">微博</option>
-						<option value="知乎">知乎</option>
-						<option value="人民网">人民网</option>
-						<option value="凤凰网">凤凰网</option>
-						<option value="腾讯网">腾讯网</option>
-					</select>
-					<p></p>
-					<font>
-						起始时间：
-					</font>
-					<input type="datetime-local">
-					<font>			</font>
-					
-					<font>
-						结束时间：
-					</font>
-					<input type="datetime-local">
-				</div>
 			</div>
-			<!-- <div>
-				<div class="left_box">
-				<el-card >
-					<div>
-					<el-input placeholder="请输入内容" clearable v-model="keyWord"></el-input>
-					<el-select v-model="webName" placeholder="请选择网站">
-						<el-option v-for="item in webOptions" :key="item.typeKey" :label="item.typeValue" :value="item.typeKey"></el-option>
-					</el-select>
-					<el-select v-model="typeName" placeholder="请选择类型">
-						<el-option v-for="item in typeOptions" :key="item.typeKey" :label="item.typeValue" :value="item.typeKey"></el-option>
-					</el-select>
-					<div class="block">
-						<span class="demonstration">默认</span>
-						<el-slider v-model="value1"></el-slider>
-					</div>
-					<div>
-						<el-button icon="el-icon-search" @click="searchKeyword">搜索</el-button>
-					</div>
-					</div>
-				</el-card>
-				</div>
-				<div class="right_box">
-				<el-card>
-
-				</el-card>
-				</div>
-			</div> -->
-			<!-- 第四行 -->
+			<div>
+				<br><br>
+				<!-- 间隔 -->
+				<input type="text"
+					disabled="disabled"
+					style="
+					background-color: transparent;
+					width:200px">
+				<!-- 开始时间 -->
+				<font style="color: #72e3ff;
+					background-color: transparent;
+					font-size: 16px;
+				">
+					起始时间：
+				</font>
+				<input type="datetime-local" style="
+					background-color: transparent;
+					color: #FFFFFF;
+					">
+				<!-- 间隔 -->
+				<input type="text"
+					disabled="disabled"
+					style="
+					background-color: transparent;
+					width:130px">
+				<!-- 阈值 -->
+				<input type="text"
+					disabled="disabled"
+					style="
+					color: #72e3ff;
+					background-color: transparent;
+					font-size: 16px;
+					width:70px"
+					value="阈值:">
+				<input type="number" min='0' max='100' 
+					style="
+						background-color:transparent;
+						color:#FFFFFF;
+						">
+				<!-- 间隔 -->
+				<input type="text"
+					disabled="disabled"
+					style="
+					background-color: transparent;
+					width:130px">
+				<!-- 结束时间 -->
+				<font style="font-size: 16px;
+					color: #72e3ff;
+				">
+					结束时间：
+				</font>
+				<input type="datetime-local" style="
+					background-color:transparent;
+					color: #FFFFFF;
+					">
+			</div>
+			<!-- 新的一行 -->
+			<div>
+				<!-- 间隔 -->
+				<input type="text"
+					disabled="disabled"
+					style="
+					background-color: transparent;
+					width:200px">
+					
+				<!-- 信息类别 -->
+				<!-- <div style="width:100%;text-align:center"> -->
+					<input type="text"
+						disabled="disabled"
+						style="
+						color: #72e3ff;
+						font-size: 16px;
+						background-color: transparent;
+						width:70px"
+						value="信息类别:">
+					<font style="
+						color: #72e3ff;
+						font-size: 16px;
+						background-color: transparent;
+						width:70px">
+						<input type="checkbox" value="新闻">新闻
+						<!-- 间隔 -->
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="财经">财经
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="军事">军事
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="娱乐">娱乐
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="政治">政治
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="八卦">八卦
+						</font>
+				<!-- </div> -->
+				
+				<!-- 间隔 -->
+				<input type="text"
+					disabled="disabled"
+					style="
+					background-color: transparent;
+					width:100px">
+				
+				<!-- 新闻来源 -->
+				<!-- <div style="width:100%;text-align:center"> -->
+					<input type="text"
+						disabled="disabled"
+						style="
+						color: #72e3ff;
+						font-size: 16px;
+						background-color: transparent;
+						width:70px"
+						value="新闻来源:">
+					<font style="
+						color: #72e3ff;
+						font-size: 16px;
+						background-color: transparent;
+						width:70px">
+						<input type="checkbox" value="百度">百度
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="微博">微博
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="知乎">知乎
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="人民网">人民网
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="凤凰网">凤凰网
+						<input type="text"
+							disabled="disabled"
+							style="
+							background-color: transparent;
+							width:5px">
+						<input type="checkbox" value="腾讯网">腾讯网
+						</font>
+			</div>
+		</div>
+			
 			<p><br><br></p>
 			
 			<div class="table-wrapper" 
@@ -184,69 +296,12 @@
 				v-loading="loading" 
 				style="width:100%;
 					text-align:center">
-			<!--	<el-table
-					:data="data_list"
-					height=1000
-					stripe=true
-					border=true
-					max-height="300"
-
-					:show-header="showHeader"
-					
-					margin-left:-5px
-					size="medium"
-					text-align="left"
-					:cell-style="rowClass"  :header-cell-style="headClass"
-					style="width: 100%">
-					<template slot="empty">
-						<p>{{dataText}}</p>
-					</template>
-					<el-table-column
-						prop="topic"
-						label="主题"
-						width="180">
-					</el-table-column>
-					<el-table-column
-						prop="summary"
-						label="摘要"
-						width="700">
-					</el-table-column>
-					<el-table-column
-						prop="url"
-						label="链接"
-						width="250">
-					</el-table-column>
-				</el-table> -->
-				
-				
-			
-		<!-- <el-table
-      :data="tableData"
-      style="width: 100%">
-      <el-table-column
-        prop="date"
-        label="日期"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="address"
-        label="地址"
-		width="180">
-      </el-table-column>
-    </el-table> -->
 			</div>
 			
-        </div>
 		<div class="d-flex jc-center body-box">
 			
 	  		<dv-scroll-board :config="config" style="width:85%;height:350px"  />
-			</div>
-     	<!-- <page1com v-bind:test_data="test_data1"> </page1com> -->
+		</div>
     </dv-full-screen-container>
   </div>
 </happy-scroll>
